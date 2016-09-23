@@ -24,7 +24,8 @@ Whiteboard::Application.routes.draw do
     end
   end
 
-  match '/auth/saml/callback', to: 'sessions#create', via: [:get, :post]
+  # match '/auth/saml/callback', to: 'sessions#create', via: [:get, :post]
+  match '/auth/developer/callback', to: 'sessions#create', via: [:get, :post]
   get '/login', to: 'sessions#new'
   get '/logout', to: 'sessions#destroy'
 

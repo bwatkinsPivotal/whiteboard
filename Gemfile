@@ -5,6 +5,7 @@ gem 'mysql2', '~> 0.3.18'
 gem 'unicorn'
 gem 'jquery-rails'
 gem 'omniauth-saml'
+gem 'omniauth-identity'
 gem 'github-markdown', require: 'github/markdown'
 gem 'exceptional'
 gem 'protected_attributes'
@@ -16,9 +17,9 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'font-awesome-sass-rails'
 gem 'evaporator', '~> 0.1.0', github: 'pivotal/evaporator'
 
-group :development, :production do
-  gem 'rails_12factor'
-end
+# group :development, :production do
+#   gem 'rails_12factor'
+# end
 
 group :test, :development do
   gem 'minitest'
@@ -27,7 +28,7 @@ group :test, :development do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'capybara'
-  gem 'capybara-webkit'
+  # gem 'capybara-webkit'
   gem 'launchy'
   gem 'database_cleaner'
   gem 'letter_opener'

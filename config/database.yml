@@ -1,6 +1,8 @@
 development:
   adapter: mysql2
   host: localhost
+  username: root
+  password: password
   database: whiteboard_development
   template: template0
 
@@ -12,5 +14,5 @@ test:
 
 production:
   adapter: mysql2
-  host: localhost
+  # host: localhost
   database: whiteboard_production
