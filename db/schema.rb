@@ -13,15 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20160927022701) do
 
-  create_table "identities", force: true do |t|
-    t.string  "email",           null: false
-    t.string  "password_digest"
-    t.integer "user_id",         null: false
-  end
-
-  add_index "identities", ["email"], name: "index_identities_on_email", unique: true, using: :btree
-  add_index "identities", ["user_id"], name: "index_identities_on_user_id", using: :btree
-
   create_table "items", force: true do |t|
     t.text     "title"
     t.text     "description"
