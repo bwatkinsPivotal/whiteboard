@@ -1,4 +1,5 @@
 Whiteboard::Application.routes.draw do
+  devise_for :users
   resources :items, only: :create
   resources :sessions, only: [:create, :destroy]
 
@@ -25,9 +26,16 @@ Whiteboard::Application.routes.draw do
   end
 
   # match '/auth/saml/callback', to: 'sessions#create', via: [:get, :post]
-  match '/auth/developer/callback', to: 'sessions#create', via: [:get, :post]
-  get '/login', to: 'sessions#new'
-  get '/logout', to: 'sessions#destroy'
 
-  root to: 'standups#last_or_index'
+  # match '/auth/developer/callback', to: 'sessions#create', via: [:get, :post]
+  # get '/login', to: 'sessions#new'
+  # get '/logout', to: 'sessions#destroy'
+
+  devise_scope :user do
+    root to: 'standups#last_or_index'
+      # root to: 'static_pages#home'
+      match '/sessions/user', to: 'devise/sessions#create', via: :post
+    end
+
+  # root to: 'standups#last_or_index'
 end
