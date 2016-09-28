@@ -1,6 +1,8 @@
 ---
 applications:
-- name: cmw-whiteboard
-  command: bundle exec rake db:migrate && bundle exec unicorn -p $PORT -c ./config/unicorn.rb
+- name: trivot-whiteboard
+  command: bundle exec rake db:migrate && bundle exec rake db:seed && bundle exec unicorn -p $PORT -c ./config/unicorn.rb
   services:
   - whiteboard_db
+  env:
+    ENABLE_WINS: true

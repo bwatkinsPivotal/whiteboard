@@ -38,10 +38,11 @@
   position: relative;
   text-transform: uppercase;
 }
-.new_face .block-header { background-color: #5894B9; }
-.help .block-header { background-color: #FFB595; }
+.face .block-header { background-color: #5894B9; }
+.helps_and_action .block-header { background-color: #FFB595; }
 .interesting .block-header { background-color: #FA7D61; }
 .event .block-header { background-color: #BECB7B; }
+.win .block-header { background-color: goldenrod; }
 
 i.icon-plus-sign {
   color: #fff;

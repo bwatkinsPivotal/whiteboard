@@ -2,7 +2,7 @@ development:
   adapter: mysql2
   host: localhost
   username: root
-  password: password
+  password:
   database: whiteboard_development
   template: template0
 
